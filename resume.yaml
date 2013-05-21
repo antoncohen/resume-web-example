@@ -1,0 +1,114 @@
+---
+name: Anton Cohen
+title: sysadmin / devops
+phone: 415-555-1234
+phone_alt: 415-555-6789
+email: anton@example.com
+address: 000 Market St
+city: San Francisco
+state: CA
+zip: 94105
+blurb: A Linux Sysadmin that likes to work with open source software
+
+passions:
+  - Open Source Software
+  - Scalability
+  - High Availability
+  - Configuration Management
+  - Python
+  - Burritos
+
+jobs:
+  -
+    company: Vacation
+    title: Founder
+    date_start: August 2011
+    date_stop: Present
+    tasks:
+      - Relaxing.
+  -
+    company: Clustrix
+    url: http://www.clustrix.com
+    title: System Administrator
+    date_start: April 2009
+    date_stop: August 2011
+    tasks:
+      - Setup <strong>Puppet</strong> configuration management.
+      - Managed Kickstart/PXE setup, for <strong>Red Hat</strong> and <strong>Debian</strong>-based systems.
+      - Installed and managed <strong>Cisco</strong> switches and routers, and Linux firewall.
+      - Packaged software as RPMs.
+      - Setup SSL certificate management.
+      - Maintained DNS and DHCP infrastructure, with bind, isc-dhcpd, and dnsmasq.
+      - Installed, managed, and upgraded web applications.
+      - Managed <strong>datacenter</strong> colo, including power, cabling, and racking.
+  -
+    company: USENIX Association
+    url: http://www.usenix.org
+    title: System Administrator
+    date_start: February 2007
+    date_stop: January 2009
+    tasks:
+      - Configured diverse systems; Linux, <strong>Solaris</strong>, BSD, Mac OS X, and Windows.
+      - Enhanced security through testing; discovered <strong>SQL</strong> injections.
+      - Standardized desktop infrastructure, including install images and LDAP.
+      - Improved backup performance with a <strong>Linux</strong> disk-to-disk backup system.
+      - Reduced telephone costs with a Linux VoIP PBX and Polycom phones.
+      - Updated documentation system to allow for efficient documentation.
+      - Configured Cisco and <strong>OpenBSD</strong> routers, and Cisco switches.
+      - Managed web server and web applications.
+  -
+    company: Kaiser Permanente
+    #url: http://www.kp.org
+    title: Desktop Support, IT Contractor
+    date_start: April 2005
+    date_stop: May 2006
+  -
+    company: "FedEx Kinko's"
+    #url: http://www.fedex.com/office
+    title: Senior Technology Specialist
+    date_start: May 2003
+    date_stop: December 2004
+  -
+    company: Best Buy
+    #url: http://www.bestbuy.com
+    title: Media Specialist
+    date_start: May 2001
+    date_stop: May 2002
+  -
+    company: LEGO California
+    #url: http://www.lego.com/games
+    title: Technical Support Specialist
+    date_start: October 2000
+    date_stop: November 2000
+  -
+    company: Santa Rosa Junior College
+    #url: http://www.santarosa.edu
+    title: Computer Lab Assistant
+    date_start: August 1998
+    date_stop: October 2000
+
+links:
+  -
+    name: Homepage
+    url: http://www.antoncohen.com
+  -
+    name: GitHub
+    url: https://github.com/antoncohen
+  -
+    name: @antoncohen
+    url: http://twitter.com/antoncohen
+  -
+    name: Resume
+    url: http://resume.antoncohen.com
+
+versions:
+  -
+    type: PDF
+    link: Anton-Cohen-Resume.pdf
+  -
+    type: Text
+    link: resume.txt
+  -
+    type: less -R
+    link: resume-color.txt
+...

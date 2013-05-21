@@ -1,0 +1,98 @@
+<% name = r['name'] %>
+<% title = r['title'] %>
+<% email = r['email'] %>
+<% phone = r['phone'] %>
+<% address = r['address'] %>
+<% city = r['city'] %>
+<% state = r['state'] %>
+<% zip = r['zip'] %>
+<% blurb = r['blurb'] %>
+<% passions = r['passions'] %>
+<% jobs = r['jobs'] %>
+<% links = r['links'] %>
+<% versions = r['versions'] %>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title><%= "Resume for #{name}" %></title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><%= name %></h1>
+        <p><%= title %></p>
+        <p><script language=JavaScript>var user = "anton"; var host = "antoncohen.com"; var link = user + "@" + host; document.write("<a hre" + "f=ma" + "ilto:" + user + "@" + host + ">" + link + "</a>");</script></p>
+        <p><%= "#{city}, #{state}" %></p>
+        <ul><strong>Things I'm Passionate About:</strong>
+          <% passions.each do |passion| %>
+              <li><%= passion %></li>
+          <% end %>
+        </ul>
+      </header>
+      <section>
+        <% jobs.each do |job| %>
+          <% if job['tasks'] %>
+          <h2>
+            <% if job['url'] %>
+              <%= "<a href=\"#{job['url']}\">#{job['company']}</a>" %>
+            <% else %>
+              <%= job['company'] %>
+            <% end %>
+          </h2>
+          <h3>
+            <%= job['title'] %>
+            <span style="float:right">
+              <%= "#{job['date_start']} - #{job['date_stop']}" %>
+            </span>
+          </h3>
+          <% if job['tasks'] %>
+            <ul>
+            <% job['tasks'].each do |task| %>
+              <li><%= task %></li>
+            <% end %>
+            </ul>
+          <% end %>
+          <% else %>
+          <h3> 
+            <% if job['url'] %>
+              <%= "<a href=\"#{job['url']}\">#{job['company']}</a>" %>
+            <% else %>
+              <%= job['company'] %>
+            <% end %>
+          </h3>
+          <h4>
+            <%= job['title'] %>
+            <span style="float:right">
+              <%= "#{job['date_start']} - #{job['date_stop']}" %>
+            </span>
+          </h4> 
+        <% end %>
+
+        <% end %>
+      </section>
+      <footer>
+        <ul>
+        <% links.each do |link| %>
+          <%= "<li><a href=\"#{link['url']}\">#{link['name']}: #{link['url'].sub(/^https?:\/\//,'')}</a></li>" %>
+        <% end %>
+        </ul>
+        <ul class="versions">Other formats:
+        <% versions.each do |version| %>
+          <%= "<li><a href=\"#{version['link']}\">#{version['type']}</a></li>" %>
+        <% end %>
+        </ul>
+ 
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>

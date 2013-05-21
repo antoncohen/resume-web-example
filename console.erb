@@ -1,0 +1,33 @@
+<% name = r['name'] %>
+<% title = r['title'] %>
+<% email = r['email'] %>
+<% phone = r['phone'] %>
+<% address = r['address'] %>
+<% city = r['city'] %>
+<% state = r['state'] %>
+<% zip = r['zip'] %>
+<% blurb = r['blurb'] %>
+<% passions = r['passions'] %>
+<% jobs = r['jobs'] %>
+<% links = r['links'] %>
+
+ <%= "\e[1m#{name}\e[0m" %> 
+ <%= title %>
+ <%= "\e[38;5;75m#{email}\e[0m | #{phone}" %> 
+ <%= "#{address} | #{city}, #{state} #{zip}" %> 
+
+ <%= "\e[1mThings I'm Passionate About:\e[0m" %>
+<% passions.each do |passion| %>
+  * <%= passion %>
+<% end %>
+
+<% jobs.each do |job| %> 
+<%= " \e[1m%-39s\e[0m%39s" % [job['company'],"#{job['date_start']} - #{job['date_stop']}"] %> 
+<% if job['url'] %><%= " \e[38;5;75m#{job['url']}\e[0m\n" %><% end %><%= " #{job['title']}" %> 
+<% if job['tasks'] then job['tasks'].each do |task| %>  * <%= task.gsub(/<\/?strong>/, '') + "\n" %><% end %><% end %>
+<% end %>
+
+<% links.each do |link| %>
+ <%= "\e[1m#{link['name']}\e[0m" %>: <%= "\e[38;5;75m#{link['url']}\e[0m" %>
+<% end %>
+
