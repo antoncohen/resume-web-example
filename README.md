@@ -1,6 +1,6 @@
 # Resume Code #
 
-This repo contains an exmaple of the code I use to create my resume:
+This repo contains an example of the code I use to create my resume:
 
 http://resume.antoncohen.com/
 
